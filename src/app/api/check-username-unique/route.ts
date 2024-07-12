@@ -16,7 +16,7 @@ export async function GET(request: Request){
       
     try {
        const { searchParams} = new URL(request.url) 
-       console.log(new URL(request.url) )
+    //    console.log(new URL(request.url) )
        const queryParam = {
         username: searchParams.get('username')
        }
@@ -46,8 +46,8 @@ export async function GET(request: Request){
 
     return Response.json({
         success: true,
-        message: "Usernname is unique"
-    },{status: 400})
+        message: "Username is unique"
+    },{status: 200})
 
     } catch (error) {
         console.error("Error checking username" , error)
